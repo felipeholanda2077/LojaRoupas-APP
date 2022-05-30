@@ -25,10 +25,8 @@ const form = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#772ea2'
   },
-  botao: {
-    color: "#fff",
 }
-});
+);
 
 // Estilização do componente Header
 const header = StyleSheet.create({
@@ -56,9 +54,7 @@ const header = StyleSheet.create({
     right: 20,
     position: "absolute",
   },
-  botao: {
-    color: "#fff",
 }
-});
+);
 
 export { form, header };

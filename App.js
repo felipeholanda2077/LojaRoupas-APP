@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Button, Image, ScrollView } from 'react-native';
-import { form } from '../LojadeRoupas/index'
+import { form } from '../LojadeRoupas/index';
 
 class App extends Component {
   render() {
@@ -83,6 +83,7 @@ class App extends Component {
             {/* Chamada do Array que ira inserir as imagens vezes */}
             {Carrosel}
           </ScrollView>
+          <Button paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
 
           <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', paddingTop: 40 }}>Moda Masculina</Text>
@@ -92,6 +93,7 @@ class App extends Component {
             {/* Chamada do Array que ira inserir as imagens vezes */}
             {Masculino}
           </ScrollView>
+          <Button paddingTop={10} color={'black'}  title='VER MAIS'></Button>
 
           <Text style={{ color: 'black', fontSize: 16, textAlign: 'left', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}------------------------------------------------------------------------------------------------------------------------</Text>
           <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 50}}>Rua Eusébio 10{'\n'}Centro, Cidade das Águas{'\n'}{'\n'}Abertura de segunda a sexta das 10:00 ás 21:00{'\n'}{'\n'}</Text>
