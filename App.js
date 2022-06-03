@@ -21,103 +21,113 @@ class App extends Component {
     //Carossel Banner
     let imagens = []
     for (let i = 0; i < 1; i++) {
-      imagens.push(<Image style={{ alignItems: 'center', width: 540, height: 400, margin: 10, borderRadius: 10 }} source={{ uri: Banner1}} />)
+      imagens.push(<Image style={{ alignItems: 'center', width: 540, height: 400, margin: 10, borderRadius: 10 }} source={{ uri: Banner1 }} />)
     }
     //Carrosel Feminino
     let Carrosel = []
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F}} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F1}} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F1 }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F2}} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F2 }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F3}} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F3 }} />)
     }
 
     //Carrosel Masculino
     let Masculino = []
     for (let i = 0; i < 1; i++) {
-      Masculino.push(<Image style={{ width: 200, height: 350,margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M }} />)
+      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Masculino.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M2 }} />)
+      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M2 }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Masculino.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M3 }} />)
+      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M3 }} />)
     }
     for (let i = 0; i < 1; i++) {
-      Masculino.push(<Image style={{width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M4 }} />)
+      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M4 }} />)
     }
 
     //Redes sociais Footer
     let RedesSociais = []
     for (let i = 0; i < 1; i++) {
-      RedesSociais.push(<Image style={{alignItems:'center', width: 540, height: 140, margin: 10, borderRadius: 45}} source={{ uri: Redes }} />)
+      RedesSociais.push(<Image style={{ alignItems: 'center', width: 540, height: 140, margin: 10, borderRadius: 45 }} source={{ uri: Redes }} />)
     }
 
     //Meios de Pagamento
     let Meiosdepagamento = []
     for (let i = 0; i < 1; i++) {
-      Meiosdepagamento.push(<Image style={{alignItems:'center', width: 540, height: 190, margin: 10}} source={{ uri: Meiospagamento }} />)
+      Meiosdepagamento.push(<Image style={{ alignItems: 'center', width: 540, height: 190, margin: 10 }} source={{ uri: Meiospagamento }} />)
     }
 
+      return (
 
-    return (
-      <ScrollView>
-        <View style={form.container}>
-          <Text style={{ color: 'black', fontSize: 20, textTransform: 'uppercase', margin: 7, paddingTop: 20 }}>BAZAAR</Text>
-          <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
-
-          <ScrollView>
-            {imagens}
-          </ScrollView>
-
-          <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 7, paddingTop: 20 }}>Moda Feminina</Text>
-          <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
-          <ScrollView horizontal={true}>
-
-            {/* Chamada do Array que ira inserir as imagens vezes */}
-            {Carrosel}
-          </ScrollView>
-          <Button paddingTop={10} color={'black'} title='VER MAIS'></Button>
-
-
-          <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', paddingTop: 40 }}>Moda Masculina</Text>
-          <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
-          <ScrollView horizontal={true}>
-
-            {/* Chamada do Array que ira inserir as imagens vezes */}
-            {Masculino}
-          </ScrollView>
-          <Button paddingTop={10} color={'black'}  title='VER MAIS'></Button>
-
-          <Text style={{ color: 'black', fontSize: 16, textAlign: 'left', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}------------------------------------------------------------------------------------------------------------------------</Text>
-          <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 50}}>Rua Eusébio 10{'\n'}Centro, Cidade das Águas{'\n'}{'\n'}Abertura de segunda a sexta das 10:00 ás 21:00{'\n'}{'\n'}</Text>
-
-          <Text style={{ color: 'black', fontSize: 16, textAlign: 'center'}}>------------------------------------------------------------------------------------------------------------------------</Text>
-
-          <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50}}>Siga-nos nas nossas redes sociais:</Text>
-
-          <ScrollView>
-          {RedesSociais}
-          </ScrollView>
-
-          <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50, paddingTop: 10 }}>Aceitamos as segintes bandeiras:</Text>
+        <ScrollView>
+          <View style={form.container}>
           
-          <ScrollView>
-          {Meiosdepagamento}
-          </ScrollView>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+              <Button title='   HOME PAGE   ' width='150' height='50' />
+              <Button title='   Categorias   ' style={{paddingleft: 50}}></Button>
+              <Button title='     Sobre    '></Button>
+            </View>
 
-          <Text style={{ color: 'black', fontSize: 13, textAlign: 'center', paddingTop: 50 }}>© Felipe Holanda - BAZAAR 2022</Text>
+            
+
+            <Text style={{ color: 'black', fontSize: 20, textTransform: 'uppercase', margin: 7, paddingTop: 20 }}>BAZAAR</Text>
+            <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
+
+            <ScrollView>
+              {imagens}
+            </ScrollView>
+
+            <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 7, paddingTop: 20 }}>Moda Feminina</Text>
+            <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
+            <ScrollView horizontal={true}>
+
+              {/* Chamada do Array que ira inserir as imagens vezes */}
+              {Carrosel}
+            </ScrollView>
+            <Button onPress={() => alert('Você pressionou o botão!')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
 
-        </View>
-      </ScrollView>
-    )
-  }
-}
+            <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', paddingTop: 40 }}>Moda Masculina</Text>
+            <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
+            <ScrollView horizontal={true}>
+
+              {/* Chamada do Array que ira inserir as imagens vezes */}
+              {Masculino}
+            </ScrollView>
+            <Button paddingTop={10} color={'black'} title='VER MAIS'></Button>
+
+            <Text style={{ color: 'black', fontSize: 16, textAlign: 'left', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}------------------------------------------------------------------------------------------------------------------------</Text>
+            <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 50 }}>Rua Eusébio 10{'\n'}Centro, Cidade das Águas{'\n'}{'\n'}Abertura de segunda a sexta das 10:00 ás 21:00{'\n'}{'\n'}</Text>
+
+            <Text style={{ color: 'black', fontSize: 16, textAlign: 'center' }}>------------------------------------------------------------------------------------------------------------------------</Text>
+
+            <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50 }}>Siga-nos nas nossas redes sociais:</Text>
+
+            <ScrollView>
+              {RedesSociais}
+            </ScrollView>
+
+            <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50, paddingTop: 10 }}>Aceitamos as segintes bandeiras:</Text>
+
+            <ScrollView>
+              {Meiosdepagamento}
+            </ScrollView>
+
+            <Text style={{ color: 'black', fontSize: 13, textAlign: 'center', paddingTop: 50 }}>© Felipe Holanda - BAZAAR 2022</Text>
+
+
+          </View>
+        </ScrollView>
+      );
+    };
+  };
+
 export default App;
