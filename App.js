@@ -21,7 +21,7 @@ class App extends Component {
     //Carossel Banner
     let imagens = []
     for (let i = 0; i < 1; i++) {
-      imagens.push(<Image style={{ alignItems: 'center', width: 540, height: 400, margin: 10, borderRadius: 10 }} source={{ uri: Banner1 }} />)
+      imagens.push(<Image style={{ alignItems: 'center', width: 540, height: 400, margin: 10, borderRadius: 10}}  source={{ uri: Banner1 }} />)
     }
     //Carrosel Feminino
     let Carrosel = []
@@ -68,6 +68,7 @@ class App extends Component {
       return (
 
         <ScrollView>
+          
           <View style={form.container}>
           
             <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -83,6 +84,7 @@ class App extends Component {
 
             <ScrollView>
               {imagens}
+              <Button title='oilalala'></Button>
             </ScrollView>
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 7, paddingTop: 20 }}>Moda Feminina</Text>
