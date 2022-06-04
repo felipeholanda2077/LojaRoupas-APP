@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button, Image, ScrollView } from 'react-native';
+import { View, SafeAreaView, StyleSheet,Dimensions, TouchableOpacity, Text, Button, Image, ScrollView } from 'react-native';
 import { form } from '../LojadeRoupas/index';
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
     //Carossel Banner
     let imagens = []
     for (let i = 0; i < 1; i++) {
-      imagens.push(<Image style={{ alignItems: 'center', width: 540, height: 400, margin: 10, borderRadius: 10}}  source={{ uri: Banner1 }} />)
+      imagens.push(<Image style={{ alignSelf: 'center', width: 540, height: 400, margin: 10, borderRadius: 10}}  source={{ uri: Banner1 }} />)
     }
     //Carrosel Feminino
     let Carrosel = []
@@ -56,14 +56,15 @@ class App extends Component {
     //Redes sociais Footer
     let RedesSociais = []
     for (let i = 0; i < 1; i++) {
-      RedesSociais.push(<Image style={{ alignItems: 'center', width: 540, height: 140, margin: 10, borderRadius: 45 }} source={{ uri: Redes }} />)
+      RedesSociais.push(<Image style={{ alignSelf: 'center', width: 540, height: 140, margin: 10, borderRadius: 45 }} source={{ uri: Redes }} />)
     }
 
     //Meios de Pagamento
     let Meiosdepagamento = []
     for (let i = 0; i < 1; i++) {
-      Meiosdepagamento.push(<Image style={{ alignItems: 'center', width: 540, height: 190, margin: 10 }} source={{ uri: Meiospagamento }} />)
+      Meiosdepagamento.push(<Image style={{ alignSelf: 'center', width: 540, height: 190, margin: 10 }} source={{ uri: Meiospagamento }} />)
     }
+
 
       return (
 
@@ -71,20 +72,19 @@ class App extends Component {
           
           <View style={form.container}>
           
-            <View style={{ flex: 1, flexDirection: 'row' }}>
-              <Button title='   HOME PAGE   ' width='150' height='50' />
-              <Button title='   Categorias   ' style={{paddingleft: 50}}></Button>
-              <Button title='     Sobre    '></Button>
+            <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', margin: 10,}}>
+              <Button color='black' borderRadius='100' title='    HOME PAGE    ' width='150' height='50' />
+              <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
+              <Button color='black' title='    Categorias    '></Button>
+              <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
+              <Button color='black' title='      Sobre     '></Button>
+              <Text style={{ color: 'black', fontSize: 30, textAlign: 'left', marginLeft: 100 , textAlign: 'right'}}>BAZAAR</Text>
             </View>
 
-            
-
-            <Text style={{ color: 'black', fontSize: 20, textTransform: 'uppercase', margin: 7, paddingTop: 20 }}>BAZAAR</Text>
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
 
             <ScrollView>
               {imagens}
-              <Button title='oilalala'></Button>
             </ScrollView>
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 7, paddingTop: 20 }}>Moda Feminina</Text>
