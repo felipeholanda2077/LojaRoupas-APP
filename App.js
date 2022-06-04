@@ -73,12 +73,12 @@ class App extends Component {
           <View style={form.container}>
           
             <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', margin: 10,}}>
-              <Button color='black' borderRadius='100' title='    HOME PAGE    ' width='150' height='50' />
-              <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
-              <Button color='black' title='    Categorias    '></Button>
-              <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
-              <Button color='black' title='      Sobre     '></Button>
-              <Text style={{ color: 'black', fontSize: 30, textAlign: 'left', marginLeft: 100 , textAlign: 'right'}}>BAZAAR</Text>
+              <Button color='blue' borderRadius='100' title='    HOME PAGE    ' width='150' height='50' />
+              <Text style={{textAlign: 'center',textDecorationColor: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
+              <Button color='blue' title='    Categorias    '></Button>
+              <Text style={{ textAlign: 'center', color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
+              <Button color='blue' title='      Sobre     '></Button>
+              <Text style={{ textAlign: 'center',color: 'black', fontSize: 30, textAlign: 'left', marginLeft: 100 , textAlign: 'right'}}>BAZAAR</Text>
             </View>
 
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
