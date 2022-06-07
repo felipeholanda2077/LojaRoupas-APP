@@ -56,13 +56,13 @@ class App extends Component {
     //Redes sociais Footer
     let RedesSociais = []
     for (let i = 0; i < 1; i++) {
-      RedesSociais.push(<Image style={{ alignSelf: 'center', width: 540, height: 140, margin: 10, borderRadius: 45 }} source={{ uri: Redes }} />)
+      RedesSociais.push(<Image style={{ alignSelf: 'center', width: 370, height: 100, margin: 10, borderRadius: 10 }} source={{ uri: Redes }} />)
     }
 
     //Meios de Pagamento
     let Meiosdepagamento = []
     for (let i = 0; i < 1; i++) {
-      Meiosdepagamento.push(<Image style={{ alignSelf: 'center', width: 540, height: 190, margin: 10 }} source={{ uri: Meiospagamento }} />)
+      Meiosdepagamento.push(<Image style={{ alignSelf: 'center', width: 390, height: 120, margin: 10 }} source={{ uri: Meiospagamento }} />)
     }
 
 
@@ -72,13 +72,13 @@ class App extends Component {
           
           <View style={form.container}>
           
-            <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', margin: 10,}}>
-              <Button color='blue' borderRadius='100' title='    HOME PAGE    ' width='150' height='50' />
-              <Text style={{textAlign: 'center',textDecorationColor: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
-              <Button color='blue' title='    Categorias    '></Button>
-              <Text style={{ textAlign: 'center', color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
-              <Button color='blue' title='      Sobre     '></Button>
-              <Text style={{ textAlign: 'center',color: 'black', fontSize: 30, textAlign: 'left', marginLeft: 100 , textAlign: 'right'}}>BAZAAR</Text>
+            <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', marginLeft:10}}>
+              <Button color='black' borderRadius='100' title='HOME' width='150' height='50'></Button>
+              <Text style={{textAlign: 'center',textDecorationColor: 'black', fontSize: 25, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
+              <Button color='black' title='Categorias'></Button>
+              <Text style={{color: 'black', fontSize: 25, textTransform: 'uppercase', paddingTop: 10 }}>            </Text>
+              <Button color='black' title='Sobre'></Button>
+              <Text style={{ textAlign: 'center',color: 'black', fontSize: 30, textAlign: 'right', marginLeft: 100}}>BAZAAR</Text>
             </View>
 
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
@@ -106,10 +106,10 @@ class App extends Component {
             </ScrollView>
             <Button onPress={() => alert('Você já viu tudo!!!')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
-            <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}------------------------------------------------------------------------------------------------------------------------</Text>
+            <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}-------------------------------------------------------------------</Text>
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 50 }}>Rua Eusébio 10{'\n'}Centro, Cidade das Águas{'\n'}{'\n'}Abertura de segunda a sexta das 10:00 ás 21:00{'\n'}{'\n'}</Text>
 
-            <Text style={{ color: 'black', fontSize: 16, textAlign: 'center' }}>------------------------------------------------------------------------------------------------------------------------</Text>
+            <Text style={{ color: 'black', fontSize: 16, textAlign: 'center' }}>----------------------------------------------------------------------------</Text>
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50 }}>Siga-nos nas nossas redes sociais:</Text>
 
