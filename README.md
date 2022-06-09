@@ -2,4 +2,4 @@
 
 <br>
 
-## Um App de uma Loja de Roupas estilo Renner
+<h3 align="center">Um App de uma Loja de Roupas estilo Renner</h3>
