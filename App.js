@@ -4,6 +4,7 @@ import { form } from '../LojadeRoupas/index';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons'
+import Modal from './src/componentes/Modal'
 
 
 import Home from './src/pages/Home/index.js';
@@ -63,7 +64,7 @@ class App extends Component {
     //Carrosel Masculino
     let Masculino = []
     for (let i = 0; i < 1; i++) {
-      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M }} />)
+      Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5, cursor: 'point'}} source={{ uri: Roupas_M }} />)
     }
     for (let i = 0; i < 1; i++) {
       Masculino.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_M2 }} />)
@@ -118,27 +119,34 @@ class App extends Component {
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
 
             <ScrollView>
-              {imagens}
+              {imagens}<Modal></Modal>
             </ScrollView>
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 7, paddingTop: 20 }}>Moda Feminina</Text>
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
+            
             <ScrollView horizontal={true}>
 
               {/* Chamada do Array que ira inserir as imagens vezes */}
               {Carrosel}
 
             </ScrollView>
+            
             <Button onPress={() => alert('Você já viu tudo!!! \n(Por Enquanto...Continuação ATV2)')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', paddingTop: 40 }}>Moda Masculina</Text>
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
+            
+          
             <ScrollView horizontal={true}>
 
               {/* Chamada do Array que ira inserir as imagens vezes */}
+              
               {Masculino}
             </ScrollView>
+          
+
             <Button onPress={() => alert('Você já viu tudo!!! \n(Por Enquanto...Continuação ATV2)')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
             <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}-------------------------------------------------------------------</Text>
@@ -152,8 +160,10 @@ class App extends Component {
               {RedesSociais}
             </ScrollView>
 
+            
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'left', margin: 50, paddingTop: 10 }}>Aceitamos as segintes bandeiras:</Text>
-
+            
+            
             <ScrollView>
               {Meiosdepagamento}
             </ScrollView>
