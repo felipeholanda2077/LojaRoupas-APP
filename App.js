@@ -1,14 +1,28 @@
 import React, {Component} from 'react';
-import { View, SafeAreaView, StyleSheet,Dimensions, TouchableOpacity, Text, Button, Image, ScrollView } from 'react-native';
+import { View, Text, Button, Image, ScrollView } from 'react-native';
 import { form } from '../LojadeRoupas/index';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons'
 
 
-import Home from './src/pages/Home/Home';
-import Sobre from './src/pages/Sobre/Sobre';
+import Home from './src/pages/Home/index.js';
+import Sobre from './src/pages/Sobre/index.js';
+import Categorias from './src/pages/Categorias/index';
 
 const Tab = createBottomTabNavigator();
+
+const icons = {
+  Home: {
+    name: 'ios-home'
+  },
+  Sobre: {
+    name: 'ios-people'
+  },
+  Categorias: {
+    name: 'ios-cart'
+  }
+};
 
 class App extends Component {
   render() {
@@ -34,7 +48,7 @@ class App extends Component {
     //Carrosel Feminino
     let Carrosel = []
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5, onPress:alert('Você pressionou o botão!')}} source={{ uri: Roupas_F }} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5}} source={{ uri: Roupas_F }} />)
     }
     for (let i = 0; i < 1; i++) {
       Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F1 }} />)
@@ -73,29 +87,33 @@ class App extends Component {
       Meiosdepagamento.push(<Image style={{ alignSelf: 'center', width: 390, height: 120, margin: 10 }} source={{ uri: Meiospagamento }} />)
     }
 
-
       return (
 
         <ScrollView>
 
-        <NavigationContainer>
-          <Tab.Navigator>
-          <Tab.Screen name="Home" component={Home} />
-          <Tab.Screen name="Sobre" component={Sobre} />
-        </Tab.Navigator>
-        </NavigationContainer>
           
           <View style={form.container}>
 
+            <Text style={{fontSize: 30, textAlign: 'center', paddingBottom: 10, color: 'white', backgroundColor: 'black', height:42}}>BAZZAAR</Text>
+
+          <NavigationContainer>
           
-            <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', marginLeft:10}}>
-              <Button color='black' borderRadius='100' title='HOME' width='150' height='50'></Button>
-              <Text style={{textAlign: 'center',textDecorationColor: 'black', fontSize: 25, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}>            </Text>
-              <Button color='black' title='Categorias'></Button>
-              <Text style={{color: 'black', fontSize: 25, textTransform: 'uppercase', paddingTop: 10 }}>            </Text>
-              <Button color='black' title='Sobre'></Button>
-              <Text style={{ textAlign: 'center',color: 'black', fontSize: 30, textAlign: 'right', marginLeft: 100}}>BAZAAR</Text>
-            </View>
+        <Tab.Navigator
+          screenOptions={ ({route}) => ({
+            tabBarIcon: ({ color, size }) => {
+              const { name } = icons[route.name];
+              return <Icon name={name} color={color} size={size} />
+            }
+          })  }
+        >
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="Categorias" component={Categorias} />
+          <Tab.Screen name="Sobre" component={Sobre} />
+        </Tab.Navigator>
+        </NavigationContainer>
+
+          
+            
 
             <Text style={{ color: 'black', fontSize: 10, textTransform: 'uppercase', textAlign: 'left', paddingTop: 10 }}></Text>
 
@@ -111,7 +129,7 @@ class App extends Component {
               {Carrosel}
 
             </ScrollView>
-            <Button onPress={() => alert('Você já viu tudo!!!')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
+            <Button onPress={() => alert('Você já viu tudo!!! \n(Por Enquanto...Continuação ATV2)')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
 
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', paddingTop: 40 }}>Moda Masculina</Text>
@@ -121,7 +139,7 @@ class App extends Component {
               {/* Chamada do Array que ira inserir as imagens vezes */}
               {Masculino}
             </ScrollView>
-            <Button onPress={() => alert('Você já viu tudo!!!')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
+            <Button onPress={() => alert('Você já viu tudo!!! \n(Por Enquanto...Continuação ATV2)')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
             <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', margin: 40 }}>Bem Vindo ao BAZAAR{'\n'}{'\n'}{'\n'}Nossos produtos são inspirados pelas pessoas que estão á nossa volta, com suas belezas e qualidades.{'\n'}{'\n'}Produtos de bom gosto especialmente para você.{'\n'}Descubra "our story" e aproveite as promoçôes imperdiveis.{'\n'}{'\n'}{'\n'}-------------------------------------------------------------------</Text>
             <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', margin: 50 }}>Rua Eusébio 10{'\n'}Centro, Cidade das Águas{'\n'}{'\n'}Abertura de segunda a sexta das 10:00 ás 21:00{'\n'}{'\n'}</Text>
@@ -144,6 +162,7 @@ class App extends Component {
 
 
           </View>
+          
         </ScrollView>
       );
     };
