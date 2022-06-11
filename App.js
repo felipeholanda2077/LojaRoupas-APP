@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { View, SafeAreaView, StyleSheet,Dimensions, TouchableOpacity, Text, Button, Image, ScrollView } from 'react-native';
 import { form } from '../LojadeRoupas/index';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+import Home from './src/pages/Home/Home';
+import Sobre from './src/pages/Sobre/Sobre';
+
+const Tab = createBottomTabNavigator();
 
 class App extends Component {
   render() {
@@ -26,7 +34,7 @@ class App extends Component {
     //Carrosel Feminino
     let Carrosel = []
     for (let i = 0; i < 1; i++) {
-      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F }} />)
+      Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5, onPress:alert('Você pressionou o botão!')}} source={{ uri: Roupas_F }} />)
     }
     for (let i = 0; i < 1; i++) {
       Carrosel.push(<Image style={{ width: 200, height: 350, margin: 10, borderRadius: 5 }} source={{ uri: Roupas_F1 }} />)
@@ -69,8 +77,16 @@ class App extends Component {
       return (
 
         <ScrollView>
+
+        <NavigationContainer>
+          <Tab.Navigator>
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="Sobre" component={Sobre} />
+        </Tab.Navigator>
+        </NavigationContainer>
           
           <View style={form.container}>
+
           
             <View style={{justifyContent: "space-around", display: 'flex', flex: 1, flexDirection: 'row', marginLeft:10}}>
               <Button color='black' borderRadius='100' title='HOME' width='150' height='50'></Button>
@@ -93,6 +109,7 @@ class App extends Component {
 
               {/* Chamada do Array que ira inserir as imagens vezes */}
               {Carrosel}
+
             </ScrollView>
             <Button onPress={() => alert('Você já viu tudo!!!')} paddingTop={10} color={'black'} title='VER MAIS'></Button>
 
